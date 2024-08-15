@@ -1,0 +1,16 @@
+a {
+    border: 1px, solid, #7bb6cc86;
+}
+a:hover{
+    background-color: #7bb6cc86;
+    border: 1px, solid, rgb(132, 226, 255);
+}
+
+a:active{
+    background-color: #7bb6cc86;
+    border: 1px, solid, rgb(132, 226, 255);
+}
+
+ul{
+    border: 1px, solid, red;
+}
