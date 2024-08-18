@@ -1,2 +1,9 @@
+
 @import "./styles/css/versions/bulma-no-dark-mode.css";
 
+
+body, html {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+}

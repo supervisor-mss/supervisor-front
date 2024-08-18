@@ -11,6 +11,12 @@ a:active{
     border: 1px, solid, rgb(132, 226, 255);
 }
 
-ul{
-    border: 1px, solid, red;
+.content-list{
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px, solid, white;
 }
+ .content-sidemenu {
+  height: 100%;
+ }
