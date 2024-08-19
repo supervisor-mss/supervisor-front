@@ -6,17 +6,13 @@ a:hover{
     border: 1px, solid, rgb(132, 226, 255);
 }
 
-a:active{
-    background-color: #7bb6cc86;
-    border: 1px, solid, rgb(132, 226, 255);
+.is-act{
+  background-color: #0e2944ff;
+  color: aliceblue;
 }
 
 .content-list{
-  margin-bottom: 20px;
   border-radius: 10px;
   padding: 10px;
   border: 1px, solid, white;
 }
- .content-sidemenu {
-  height: 100%;
- }

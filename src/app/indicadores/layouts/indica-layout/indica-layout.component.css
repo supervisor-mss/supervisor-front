@@ -1,18 +1,18 @@
 .container-layout{
-  height: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
-
-header {
-  height: 12%;
+main {
+  min-height: 100%;
 }
-
-.contenido {
-  padding-bottom: 7px;
-  height: 88%;
-}
-
 aside {
   background-color: #bce5ee;
+}
+footer {
+  text-align: center;
+  color: #bce5ee;
+  background-color: #092949;
 }
 
 

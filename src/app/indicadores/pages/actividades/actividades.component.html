@@ -1,4 +1,45 @@
 
 <div class ="content-page">
-  <h2 class="title is-4" style="color: #092949;">Registro de Actividades</h2>
+
+  <div class="content-search">
+
+    <h2 class="title is-4">Registro de Actividades</h2>
+
+    <div class=" columns is-8">
+
+      <div class="column">
+        <span class="input-date">
+          <input class="input is-primary is-rounded" type="date" name="date" id="shift">
+        </span>
+      </div>
+
+
+      <div class="column">
+        <div class="select is-primary is-rounded">
+          <select name="shift" id="shift" placehoklder="Turno">
+            <option value="">Administrativo</option>
+            <option value="">Guardia TA</option>
+            <option value="">Nocturno</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="column">
+        <button class="button is-rounded is-outlined is-primary" routerLink="/indicadores/nueva-actividad">Nueva Actividad</button>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="content-activities">
+    <div>
+      <h2 class="title is-6">Actividades del dia:</h2>
+    </div>
+
+    <div class="table-activities">
+      <h2>Contenido</h2>
+    </div>
+
+  </div>
+
 </div>

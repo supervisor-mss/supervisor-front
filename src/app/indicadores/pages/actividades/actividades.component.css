@@ -1,5 +1,49 @@
+
+/*LayOut General*/
 .content-page {
-  padding: 10px;
-  height: 100%;
+  padding: 20px;
+  min-height: 100%;
   background-color: #e9f6f9;
+  display: grid;
+  grid-template-rows: auto 1fr;
 }
+
+.content-search{
+  margin-bottom: 30px;
+}
+
+.content-activities{
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.table-activities{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+}
+
+
+.input-date {
+  width: 50%;
+}
+input{
+  width: 100%;
+}
+.select {
+  width: 50%;
+}
+select{
+  width: 100%;
+}
+button{
+  width: 50%;
+}
+
+.column{
+  display: flex;
+  justify-content: center;
+}
+
+

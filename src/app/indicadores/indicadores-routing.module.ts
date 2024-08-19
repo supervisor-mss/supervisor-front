@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { IndicaLayoutComponent } from './layouts/indica-layout/indica-layout.component';
 import { ActividadesComponent } from './pages/actividades/actividades.component';
+import { NuevaActividadComponent } from './pages/nueva-actividad/nueva-actividad.component';
+import { PreventivosComponent } from './pages/preventivos/preventivos.component';
 
 const routes: Routes = [
   {
@@ -9,8 +11,16 @@ const routes: Routes = [
     component: IndicaLayoutComponent,
     children: [
       {
-        path: 'actividades', 
+        path: 'actividades',
         component: ActividadesComponent
+      },
+      {
+        path: 'nueva-actividad',
+        component: NuevaActividadComponent
+      },
+      {
+        path: 'preventivos',
+        component: PreventivosComponent
       },
       {
         path: '**',
