@@ -7,36 +7,40 @@
         <a [class]="active2" (click)="changeStatus('PREVENTIVO')">PREVENTIVO</a>
         <a [class]="active3" (click)="changeStatus('ACT_ADM')">ACTIVIDAD ADMINISTRATIVA</a>
       </p>
+
+      <ng-template *ngIf="tipeActivitySelected === 'PREVENTIVO'">
+        <div>Hola</div>
+      </ng-template>
       <div class="panel-block">
         <div class="block-form">
           <div class="columns is-multiline">
             <div class="column is-one-third">
               <div class="element">
-                <label for="partida">Partida:</label>
+                <label class="label" for="partida">Partida:</label>
                 <input class="input is-small is-primary" type="text" placeholder="Partida">
               </div>
             </div>
             <div class="column is-one-third">
               <div class="element">
-                <label for="partida">Dispositivo:</label>
+                <label class="label" for="partida">Dispositivo:</label>
                 <input class="input is-small is-primary" type="text" placeholder="Dispositivo">
               </div>
             </div>
             <div class="column is-one-third">
               <div class="element">
-                <label for="tipo">Tipo Actividad:</label>
+                <label class="label" for="tipo">Tipo Actividad:</label>
                 <input class="input is-small is-primary" type="text" placeholder="Tipo Actividad">
               </div>
             </div>
             <div class="column is-half">
               <div class="element">
-                <label for="descripcion">Descripcion del Técnico:</label>
+                <label class="label" for="descripcion">Descripcion del Técnico:</label>
                 <input class="input is-small is-primary" type="text" placeholder="Descripcion del Técnico">
               </div>
             </div>
             <div class="column is-half">
               <div class="element">
-                <label for="descripcion">Descripcion de la Solución:</label>
+                <label class="label" for="descripcion">Descripcion de la Solución:</label>
                 <input class="input is-small is-primary" type="text" placeholder="Descripcion de la Solucion">
               </div>
             </div>
@@ -49,25 +53,25 @@
           <div class="columns is-multiline">
             <div class="column is-one-quarter">
               <div class="element">
-                <label for="partida">Partida:</label>
+                <label class="label" for="partida">Partida:</label>
                 <input class="input is-small is-primary" type="text" placeholder="Partida">
               </div>
             </div>
             <div class="column is-one-quarter">
               <div class="element">
-                <label for="partida">Dispositivo:</label>
+                <label class="label" for="partida">Dispositivo:</label>
                 <input class="input is-small is-primary" type="text" placeholder="Dispositivo">
               </div>
             </div>
             <div class="column is-one-quarter">
               <div class="element">
-                <label for="partida">Dispositivo:</label>
+                <label class="label" for="partida">Dispositivo:</label>
                 <input class="input is-small is-primary" type="text" placeholder="Dispositivo">
               </div>
             </div>
             <div class="column is-one-quarter">
               <div class="element">
-                <label for="partida">Dispositivo:</label>
+                <label class="label" for="partida">Dispositivo:</label>
                 <input class="input is-small is-primary" type="text" placeholder="Dispositivo">
               </div>
             </div>
@@ -81,13 +85,13 @@
           <div class="columns is-multiline">
             <div class="column is-one-fifth ">
               <div class="element">
-                <label for="partida">Inicio</label>
+                <label class="label" for="partida">Inicio</label>
                 <input class="input is-small is-primary" type="text" placeholder="Partida">
               </div>
             </div>
             <div class="column is-one-fifth">
               <div class="element">
-                <label for="partida">Final:</label>
+                <label class="label" for="partida">Final:</label>
                 <input class="input is-small is-primary" type="text" placeholder="Dispositivo">
               </div>
             </div>
@@ -95,31 +99,31 @@
             </div>
             <div class="column is-one-fifth">
               <div class="element">
-                <label for="partida">Alimentos:</label>
+                <label class="label" for="partida">Alimentos:</label>
                 <input class="input is-small is-primary" type="text" placeholder="Dispositivo">
               </div>
             </div>
             <div class="column is-one-fifth">
               <div class="element">
-                <label for="partida">Traslados:</label>
+                <label class="label" for="partida">Traslados:</label>
                 <input class="input is-small is-primary" type="text" placeholder="Dispositivo">
               </div>
             </div>
             <div class="column is-one-fifth">
               <div class="element">
-                <label for="partida">Accesos:</label>
+                <label class="label" for="partida">Accesos:</label>
                 <input class="input is-small is-primary" type="text" placeholder="Dispositivo">
               </div>
             </div>
             <div class="column is-one-fifth">
               <div class="element">
-                <label for="partida">Codigos</label>
+                <label class="label" for="partida">Codigos</label>
                 <input class="input is-small is-primary" type="text" placeholder="Dispositivo">
               </div>
             </div>
             <div class="column is-one-fifth">
               <div class="element">
-                <label for="partida">Almacen:</label>
+                <label class="label" for="partida">Almacen:</label>
                 <input class="input is-small is-primary" type="text" placeholder="Dispositivo">
               </div>
             </div>
@@ -128,9 +132,6 @@
         </div>
 
       </div>
-
-
-
 
       <div class="panel-block">
         <div class="footer-activity">

@@ -16,6 +16,7 @@ export class NuevaActividadComponent {
 
   changeStatus(typeActivity: string){
     this.tipeActivitySelected = typeActivity;
+    console.log(this.tipeActivitySelected)
     switch(this.tipeActivitySelected){
       case 'NO_PLANIFICADO':
         this.active1 = 'is-act';
