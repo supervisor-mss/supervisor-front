@@ -5,27 +5,35 @@
 
     <h2 class="title is-4">Registro de Actividades</h2>
 
-    <div class=" columns is-8">
+    <div class="row-col columns is-8">
 
       <div class="column">
-        <span class="input-date">
-          <input class="input is-primary is-rounded" type="date" name="date" id="shift">
-        </span>
+        <div class="element">
+          <label for="date">Fecha:</label>
+          <span class="input-date">
+            <input class="input is-primary is-rounded" type="date" name="date" id="shift">
+          </span>
+        </div>
       </div>
 
 
       <div class="column">
-        <div class="select is-primary is-rounded">
-          <select name="shift" id="shift" placehoklder="Turno">
-            <option value="">Administrativo</option>
-            <option value="">Guardia TA</option>
-            <option value="">Nocturno</option>
-          </select>
+        <div class="element">
+          <label for="">Turno:</label>
+          <div class="select is-primary is-rounded">
+            <select name="shift" id="shift" placehoklder="Turno">
+              <option value="">Administrativo</option>
+              <option value="">Guardia TA</option>
+              <option value="">Nocturno</option>
+            </select>
+          </div>
         </div>
       </div>
 
       <div class="column">
-        <button class="button is-rounded is-outlined is-primary" routerLink="/indicadores/nueva-actividad">Nueva Actividad</button>
+        <div class="element">
+          <button class="button is-rounded is-outlined is-primary" routerLink="/indicadores/nueva-actividad">Nueva Actividad</button>
+        </div>
       </div>
 
     </div>

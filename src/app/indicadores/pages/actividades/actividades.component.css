@@ -1,4 +1,3 @@
-
 /*LayOut General*/
 .content-page {
   padding: 20px;
@@ -24,26 +23,31 @@
   min-height: 100%;
 }
 
-
-.input-date {
-  width: 50%;
-}
-input{
-  width: 100%;
-}
-.select {
-  width: 50%;
-}
-select{
-  width: 100%;
-}
-button{
-  width: 50%;
-}
-
-.column{
+.row-col {
   display: flex;
-  justify-content: center;
+  align-items: flex-end;
 }
+
+.element {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+select, button{
+  min-width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+
+
+
 
 
