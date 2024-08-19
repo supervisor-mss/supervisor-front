@@ -9,7 +9,7 @@ export class NuevaActividadComponent {
 
   tipeActivitySelected: string = "NO_PLANIFICADO"
 
-  active1: string = ''
+  active1: string = 'is-act'
   active2: string = ''
   active3: string = ''
 
@@ -18,19 +18,19 @@ export class NuevaActividadComponent {
     this.tipeActivitySelected = typeActivity;
     switch(this.tipeActivitySelected){
       case 'NO_PLANIFICADO':
-        this.active1 = 'is-active';
+        this.active1 = 'is-act';
         this.active2 = '';
         this.active3 = '';
         break;
       case 'PREVENTIVO':
         this.active1 = '';
-        this.active2 = 'is-active';
+        this.active2 = 'is-act';
         this.active3 = '';
         break;
       case 'ACT_ADM':
         this.active1 = '';
         this.active2 = '';
-        this.active3 = 'is-active';
+        this.active3 = 'is-act';
         break;
       default:
         return;

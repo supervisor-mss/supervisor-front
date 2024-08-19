@@ -1,141 +1,143 @@
 <div class="content-activiy">
-  <article class="panel is-primary">
-    <p class="panel-heading">Nueva Actividad</p>
-    <p class="panel-tabs">
-      <a [class]="active1" (click)="changeStatus('NO_PLANIFICADO')">NO PLANIFICADO</a>
-      <a [class]="active2" (click)="changeStatus('PREVENTIVO')">PREVENTIVO</a>
-      <a [class]="active3" (click)="changeStatus('ACT_ADM')">ACTIVIDAD ADMINISTRATIVA</a>
-    </p>
-    <div class="panel-block">
-      <div class="block-form">
-        <div class="columns is-multiline">
-          <div class="column is-one-third">
-            <div class="element">
-              <label for="partida">Partida:</label>
-              <input class="input" type="text" placeholder="Partida">
+  <div class="content-panel">
+    <article class="panel is-primary">
+      <p class="panel-heading">Nueva Actividad</p>
+      <p class="panel-tabs">
+        <a [class]="active1" (click)="changeStatus('NO_PLANIFICADO')">NO PLANIFICADO</a>
+        <a [class]="active2" (click)="changeStatus('PREVENTIVO')">PREVENTIVO</a>
+        <a [class]="active3" (click)="changeStatus('ACT_ADM')">ACTIVIDAD ADMINISTRATIVA</a>
+      </p>
+      <div class="panel-block">
+        <div class="block-form">
+          <div class="columns is-multiline">
+            <div class="column is-one-third">
+              <div class="element">
+                <label for="partida">Partida:</label>
+                <input class="input is-small is-primary" type="text" placeholder="Partida">
+              </div>
             </div>
-          </div>
-          <div class="column is-one-third">
-            <div class="element">
-              <label for="partida">Dispositivo:</label>
-              <input class="input" type="text" placeholder="Dispositivo">
+            <div class="column is-one-third">
+              <div class="element">
+                <label for="partida">Dispositivo:</label>
+                <input class="input is-small is-primary" type="text" placeholder="Dispositivo">
+              </div>
             </div>
-          </div>
-          <div class="column is-one-third">
-            <div class="element">
-              <label for="tipo">Tipo Actividad:</label>
-              <input class="input" type="text" placeholder="Tipo Actividad">
+            <div class="column is-one-third">
+              <div class="element">
+                <label for="tipo">Tipo Actividad:</label>
+                <input class="input is-small is-primary" type="text" placeholder="Tipo Actividad">
+              </div>
             </div>
-          </div>
-          <div class="column is-half">
-            <div class="element">
-              <label for="descripcion">Descripcion del Tecnico:</label>
-              <input class="input" type="text" placeholder="Descripcion del Técnico">
+            <div class="column is-half">
+              <div class="element">
+                <label for="descripcion">Descripcion del Técnico:</label>
+                <input class="input is-small is-primary" type="text" placeholder="Descripcion del Técnico">
+              </div>
             </div>
-          </div>
-          <div class="column is-half">
-            <div class="element">
-              <label for="descripcion">Descripcion de la Solucion:</label>
-              <input class="input" type="text" placeholder="Descripcion de la Solucion">
+            <div class="column is-half">
+              <div class="element">
+                <label for="descripcion">Descripcion de la Solución:</label>
+                <input class="input is-small is-primary" type="text" placeholder="Descripcion de la Solucion">
+              </div>
             </div>
           </div>
         </div>
+
+      </div>
+      <div class="panel-block">
+        <div class="block-form">
+          <div class="columns is-multiline">
+            <div class="column is-one-quarter">
+              <div class="element">
+                <label for="partida">Partida:</label>
+                <input class="input is-small is-primary" type="text" placeholder="Partida">
+              </div>
+            </div>
+            <div class="column is-one-quarter">
+              <div class="element">
+                <label for="partida">Dispositivo:</label>
+                <input class="input is-small is-primary" type="text" placeholder="Dispositivo">
+              </div>
+            </div>
+            <div class="column is-one-quarter">
+              <div class="element">
+                <label for="partida">Dispositivo:</label>
+                <input class="input is-small is-primary" type="text" placeholder="Dispositivo">
+              </div>
+            </div>
+            <div class="column is-one-quarter">
+              <div class="element">
+                <label for="partida">Dispositivo:</label>
+                <input class="input is-small is-primary" type="text" placeholder="Dispositivo">
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+      <div class="panel-block">
+        <div class="block-form">
+          <div class="columns is-multiline">
+            <div class="column is-one-fifth ">
+              <div class="element">
+                <label for="partida">Inicio</label>
+                <input class="input is-small is-primary" type="text" placeholder="Partida">
+              </div>
+            </div>
+            <div class="column is-one-fifth">
+              <div class="element">
+                <label for="partida">Final:</label>
+                <input class="input is-small is-primary" type="text" placeholder="Dispositivo">
+              </div>
+            </div>
+            <div class="column is-three-fifths">
+            </div>
+            <div class="column is-one-fifth">
+              <div class="element">
+                <label for="partida">Alimentos:</label>
+                <input class="input is-small is-primary" type="text" placeholder="Dispositivo">
+              </div>
+            </div>
+            <div class="column is-one-fifth">
+              <div class="element">
+                <label for="partida">Traslados:</label>
+                <input class="input is-small is-primary" type="text" placeholder="Dispositivo">
+              </div>
+            </div>
+            <div class="column is-one-fifth">
+              <div class="element">
+                <label for="partida">Accesos:</label>
+                <input class="input is-small is-primary" type="text" placeholder="Dispositivo">
+              </div>
+            </div>
+            <div class="column is-one-fifth">
+              <div class="element">
+                <label for="partida">Codigos</label>
+                <input class="input is-small is-primary" type="text" placeholder="Dispositivo">
+              </div>
+            </div>
+            <div class="column is-one-fifth">
+              <div class="element">
+                <label for="partida">Almacen:</label>
+                <input class="input is-small is-primary" type="text" placeholder="Dispositivo">
+              </div>
+            </div>
+
+          </div>
+        </div>
+
       </div>
 
-    </div>
-    <div class="panel-block">
-      <div class="block-form">
-        <div class="columns is-multiline">
-          <div class="column is-one-quarter">
-            <div class="element">
-              <label for="partida">Partida:</label>
-              <input class="input" type="text" placeholder="Partida">
-            </div>
-          </div>
-          <div class="column is-one-quarter">
-            <div class="element">
-              <label for="partida">Dispositivo:</label>
-              <input class="input" type="text" placeholder="Dispositivo">
-            </div>
-          </div>
-          <div class="column is-one-quarter">
-            <div class="element">
-              <label for="partida">Dispositivo:</label>
-              <input class="input" type="text" placeholder="Dispositivo">
-            </div>
-          </div>
-          <div class="column is-one-quarter">
-            <div class="element">
-              <label for="partida">Dispositivo:</label>
-              <input class="input" type="text" placeholder="Dispositivo">
-            </div>
-          </div>
 
+
+
+      <div class="panel-block">
+        <div class="footer-activity">
+          <button class="button is-danger" routerLink="/indicadores/actividades">Cancelar</button>
+          <button class="button is-primary" routerLink="/indicadores/actividades">Guardar</button>
         </div>
       </div>
-
-    </div>
-    <div class="panel-block">
-      <div class="block-form">
-        <div class="columns is-multiline">
-          <div class="column is-one-fifth ">
-            <div class="element">
-              <label for="partida">Inicio</label>
-              <input class="input" type="text" placeholder="Partida">
-            </div>
-          </div>
-          <div class="column is-one-fifth">
-            <div class="element">
-              <label for="partida">Final:</label>
-              <input class="input" type="text" placeholder="Dispositivo">
-            </div>
-          </div>
-          <div class="column is-three-fifths">
-          </div>
-          <div class="column is-one-fifth">
-            <div class="element">
-              <label for="partida">Alimentos:</label>
-              <input class="input" type="text" placeholder="Dispositivo">
-            </div>
-          </div>
-          <div class="column is-one-fifth">
-            <div class="element">
-              <label for="partida">Traslados:</label>
-              <input class="input" type="text" placeholder="Dispositivo">
-            </div>
-          </div>
-          <div class="column is-one-fifth">
-            <div class="element">
-              <label for="partida">Accesos:</label>
-              <input class="input" type="text" placeholder="Dispositivo">
-            </div>
-          </div>
-          <div class="column is-one-fifth">
-            <div class="element">
-              <label for="partida">Codigos</label>
-              <input class="input" type="text" placeholder="Dispositivo">
-            </div>
-          </div>
-          <div class="column is-one-fifth">
-            <div class="element">
-              <label for="partida">Almacen:</label>
-              <input class="input" type="text" placeholder="Dispositivo">
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-
-
-
-
-    <div class="panel-block">
-      <div class="footer-activity">
-        <button class="button is-danger" routerLink="/indicadores/actividades">Cancelar</button>
-        <button class="button is-primary" routerLink="/indicadores/actividades">Guardar</button>
-      </div>
-    </div>
-  </article>
+    </article>
+  </div>
 </div>

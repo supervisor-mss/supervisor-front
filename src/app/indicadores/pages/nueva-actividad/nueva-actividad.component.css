@@ -1,6 +1,11 @@
 .content-activiy{
+  display: flex;
+  justify-content: center;
+  min-height: 100%;
+  background-color: #e9f6f9;
   padding: 20px;
 }
+
 .block-form {
   width: 100%;
 }
@@ -10,3 +15,26 @@
   display: flex;
   flex-direction: column;
 }
+
+a{
+  text-decoration: none;
+  color: black;
+}
+.is-act{
+  background-color: white;
+}
+
+.footer-activity{
+  padding: 0.5rem 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.button{
+  color: white;
+  margin-left: 0.5rem;
+}
+
+
