@@ -1,0 +1,12 @@
+.content-activiy{
+  padding: 20px;
+}
+.block-form {
+  width: 100%;
+}
+
+.element {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
