@@ -1,0 +1,22 @@
+.element {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+label{
+    font-size: small;
+}
+
+.footer-activity{
+    padding: 0.5rem 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.button{
+    color: white;
+    margin-left: 0.5rem;
+}

@@ -7,137 +7,22 @@
         <a [class]="active2" (click)="changeStatus('PREVENTIVO')">PREVENTIVO</a>
         <a [class]="active3" (click)="changeStatus('ACT_ADM')">ACTIVIDAD ADMINISTRATIVA</a>
       </p>
-
-      <ng-template *ngIf="tipeActivitySelected === 'PREVENTIVO'">
-        <div>Hola</div>
-      </ng-template>
       <div class="panel-block">
-        <div class="block-form">
-          <div class="columns is-multiline">
-            <div class="column is-one-third">
-              <div class="element">
-                <label class="label" for="partida">Partida:</label>
-                <input class="input is-small is-primary" type="text" placeholder="Partida">
-              </div>
-            </div>
-            <div class="column is-one-third">
-              <div class="element">
-                <label class="label" for="partida">Dispositivo:</label>
-                <input class="input is-small is-primary" type="text" placeholder="Dispositivo">
-              </div>
-            </div>
-            <div class="column is-one-third">
-              <div class="element">
-                <label class="label" for="tipo">Tipo Actividad:</label>
-                <input class="input is-small is-primary" type="text" placeholder="Tipo Actividad">
-              </div>
-            </div>
-            <div class="column is-half">
-              <div class="element">
-                <label class="label" for="descripcion">Descripcion del Técnico:</label>
-                <input class="input is-small is-primary" type="text" placeholder="Descripcion del Técnico">
-              </div>
-            </div>
-            <div class="column is-half">
-              <div class="element">
-                <label class="label" for="descripcion">Descripcion de la Solución:</label>
-                <input class="input is-small is-primary" type="text" placeholder="Descripcion de la Solucion">
-              </div>
-            </div>
+        <ng-container *ngIf="tipeActivitySelected === 'NO_PLANIFICADO'">
+          <div class="block-form">
+            <indicadores-form-no-planificado></indicadores-form-no-planificado>
           </div>
-        </div>
-
-      </div>
-      <div class="panel-block">
-        <div class="block-form">
-          <div class="columns is-multiline">
-            <div class="column is-one-quarter">
-              <div class="element">
-                <label class="label" for="partida">Partida:</label>
-                <input class="input is-small is-primary" type="text" placeholder="Partida">
-              </div>
-            </div>
-            <div class="column is-one-quarter">
-              <div class="element">
-                <label class="label" for="partida">Dispositivo:</label>
-                <input class="input is-small is-primary" type="text" placeholder="Dispositivo">
-              </div>
-            </div>
-            <div class="column is-one-quarter">
-              <div class="element">
-                <label class="label" for="partida">Dispositivo:</label>
-                <input class="input is-small is-primary" type="text" placeholder="Dispositivo">
-              </div>
-            </div>
-            <div class="column is-one-quarter">
-              <div class="element">
-                <label class="label" for="partida">Dispositivo:</label>
-                <input class="input is-small is-primary" type="text" placeholder="Dispositivo">
-              </div>
-            </div>
-
+        </ng-container >
+        <ng-container *ngIf="tipeActivitySelected === 'PREVENTIVO'">
+          <div class="block-form">
+            <indicadores-form-preventivo></indicadores-form-preventivo>
           </div>
-        </div>
-
-      </div>
-      <div class="panel-block">
-        <div class="block-form">
-          <div class="columns is-multiline">
-            <div class="column is-one-fifth ">
-              <div class="element">
-                <label class="label" for="partida">Inicio</label>
-                <input class="input is-small is-primary" type="text" placeholder="Partida">
-              </div>
-            </div>
-            <div class="column is-one-fifth">
-              <div class="element">
-                <label class="label" for="partida">Final:</label>
-                <input class="input is-small is-primary" type="text" placeholder="Dispositivo">
-              </div>
-            </div>
-            <div class="column is-three-fifths">
-            </div>
-            <div class="column is-one-fifth">
-              <div class="element">
-                <label class="label" for="partida">Alimentos:</label>
-                <input class="input is-small is-primary" type="text" placeholder="Dispositivo">
-              </div>
-            </div>
-            <div class="column is-one-fifth">
-              <div class="element">
-                <label class="label" for="partida">Traslados:</label>
-                <input class="input is-small is-primary" type="text" placeholder="Dispositivo">
-              </div>
-            </div>
-            <div class="column is-one-fifth">
-              <div class="element">
-                <label class="label" for="partida">Accesos:</label>
-                <input class="input is-small is-primary" type="text" placeholder="Dispositivo">
-              </div>
-            </div>
-            <div class="column is-one-fifth">
-              <div class="element">
-                <label class="label" for="partida">Codigos</label>
-                <input class="input is-small is-primary" type="text" placeholder="Dispositivo">
-              </div>
-            </div>
-            <div class="column is-one-fifth">
-              <div class="element">
-                <label class="label" for="partida">Almacen:</label>
-                <input class="input is-small is-primary" type="text" placeholder="Dispositivo">
-              </div>
-            </div>
-
+        </ng-container>
+        <ng-container *ngIf="tipeActivitySelected === 'ACT_ADM'">
+          <div class="block-form">
+            <indicadores-form-act-adm></indicadores-form-act-adm>
           </div>
-        </div>
-
-      </div>
-
-      <div class="panel-block">
-        <div class="footer-activity">
-          <button class="button is-danger" routerLink="/indicadores/actividades">Cancelar</button>
-          <button class="button is-primary" routerLink="/indicadores/actividades">Guardar</button>
-        </div>
+        </ng-container>
       </div>
     </article>
   </div>
