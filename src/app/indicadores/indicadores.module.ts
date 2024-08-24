@@ -9,6 +9,7 @@ import { PreventivosComponent } from './pages/preventivos/preventivos.component'
 import { FormNoPlanificadoComponent } from './components/form-no-planificado/form-no-planificado.component';
 import { FormPreventivoComponent } from './components/form-preventivo/form-preventivo.component';
 import { FormActAdmComponent } from './components/form-act-adm/form-act-adm.component';
+import { FormControl, FormsModule } from '@angular/forms';
 
 
 
@@ -23,6 +24,7 @@ import { FormActAdmComponent } from './components/form-act-adm/form-act-adm.comp
     FormActAdmComponent
   ],
   imports: [
+    FormsModule,
     CommonModule,
     IndicadoresRoutingModule,
     SharedModule

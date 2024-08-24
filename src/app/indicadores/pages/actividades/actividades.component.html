@@ -11,7 +11,10 @@
         <div class="element">
           <label for="date">Fecha:</label>
           <span class="input-date">
-            <input class="input is-primary is-rounded" type="date" name="date" id="shift">
+            <input class="input is-primary is-rounded" 
+                  id="actDate" name="actDate" type="date"  
+                  [ngModel]='date | date:"yyyy-MM-dd"' 
+                  #actDate="ngModel" (ngModelChange)='date=$event' (change)='setDate()'>
           </span>
         </div>
       </div>
