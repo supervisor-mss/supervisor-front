@@ -1,0 +1,17 @@
+.content-plantillas{
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    margin: 20px;
+    min-height: 100%;
+}
+
+.header-plantillas{
+    margin-bottom: 2rem;
+}
+
+.content-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  

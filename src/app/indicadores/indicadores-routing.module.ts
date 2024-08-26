@@ -4,6 +4,7 @@ import { IndicaLayoutComponent } from './layouts/indica-layout/indica-layout.com
 import { ActividadesComponent } from './pages/actividades/actividades.component';
 import { NuevaActividadComponent } from './pages/nueva-actividad/nueva-actividad.component';
 import { PreventivosComponent } from './pages/preventivos/preventivos.component';
+import { PlantillasComponent } from './pages/plantillas/plantillas.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
       {
         path: 'preventivos',
         component: PreventivosComponent
+      },
+      {
+        path: 'plantillas',
+        component: PlantillasComponent
       },
       {
         path: '**',

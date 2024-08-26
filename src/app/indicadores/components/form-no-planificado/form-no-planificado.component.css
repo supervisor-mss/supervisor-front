@@ -4,6 +4,10 @@
     flex-direction: column;
   }
 
+select, .select{
+    width: 100%;
+}
+
 label{
     font-size: small;
 }

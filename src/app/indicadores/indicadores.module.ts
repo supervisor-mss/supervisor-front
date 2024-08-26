@@ -9,7 +9,8 @@ import { PreventivosComponent } from './pages/preventivos/preventivos.component'
 import { FormNoPlanificadoComponent } from './components/form-no-planificado/form-no-planificado.component';
 import { FormPreventivoComponent } from './components/form-preventivo/form-preventivo.component';
 import { FormActAdmComponent } from './components/form-act-adm/form-act-adm.component';
-import { FormControl, FormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { PlantillasComponent } from './pages/plantillas/plantillas.component';
 
 
 
@@ -21,7 +22,8 @@ import { FormControl, FormsModule } from '@angular/forms';
     PreventivosComponent,
     FormNoPlanificadoComponent,
     FormPreventivoComponent,
-    FormActAdmComponent
+    FormActAdmComponent,
+    PlantillasComponent
   ],
   imports: [
     FormsModule,
