@@ -4,8 +4,10 @@
             <label class="label">Partida:</label>
             <div class="control">
                 <div class="select is-small is-primary">
-                    <select>
-                        <option>PARTIDA 01</option>
+                    <select (change)="onPartyChange($event.target!)" [(ngModel)]="selectedParty">
+                        <option *ngFor="let party of parties" [value]="party.party_number">
+                          {{party.party_number}}
+                        </option>
                     </select>
                 </div>
             </div>
@@ -16,8 +18,10 @@
             <label class="label">Dispositivo:</label>
             <div class="control">
                 <div class="select is-small is-primary">
-                    <select>
-                        <option>EQUIPO DE COMPUTO</option>
+                    <select (change)="onDeviceChange($event.target)" >
+                        <option *ngFor="let device of devices" [value]="device">
+                          {{device}}
+                        </option>
                     </select>
                 </div>
             </div>
@@ -28,8 +32,10 @@
             <label class="label">Tipo de Actividad:</label>
             <div class="control">
                 <div class="select is-small is-primary">
-                    <select>
-                        <option>ATENCION</option>
+                    <select (change)="onActivityTypeChange($event.target)">
+                        <option *ngFor="let activity_type of activity_types" [value]="activity_type">
+                          {{activity_type}}
+                        </option>
                     </select>
                 </div>
             </div>
@@ -136,6 +142,6 @@
 
 <div class="footer-activity">
     <button class="button is-danger" routerLink="/indicadores/actividades">Cancelar</button>
-    <button class="button is-primary" routerLink="/indicadores/actividades">Guardar</button>
+    <button class="button is-primary" (click)="testInfo()">Guardar</button>
 </div>
 

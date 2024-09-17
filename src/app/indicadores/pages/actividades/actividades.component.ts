@@ -14,10 +14,9 @@ export class ActividadesComponent implements OnInit {
   ){}
 
   ngOnInit(): void {
-    console.log(this.date.toISOString().slice(0,10))
   }
 
-  
+
 
   setDate(){
     console.log(this.date)
@@ -25,6 +24,6 @@ export class ActividadesComponent implements OnInit {
 
 
 
-  
+
 
 }
