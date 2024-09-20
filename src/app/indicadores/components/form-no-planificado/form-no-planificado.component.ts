@@ -17,7 +17,8 @@ export class FormNoPlanificadoComponent implements OnInit{
   devices: string[] = [];
   activity_types: string[] = [];
   ticket_descriptions: string[] = [];
-  tech_descriptions: string[] =[];
+  tech_descriptions: string[] = [];
+  areas_conocidas: string[] = [];
 
 
   selectedParty: string = "";
@@ -32,6 +33,7 @@ export class FormNoPlanificadoComponent implements OnInit{
 
   ngOnInit(): void {
     this.getAllParties();
+    this.getAreasConocidas()
   }
 
   getAllParties(){
@@ -78,6 +80,12 @@ export class FormNoPlanificadoComponent implements OnInit{
       this.tech_descriptions = data;
       if(this.tech_descriptions.length === 0) return
       this.selectedTechDescription = this.tech_descriptions[0];
+    })
+  }
+
+  getAreasConocidas(){
+    this.indicadoresService.getAreasConocidas().subscribe(data => {
+      this.areas_conocidas = data;
     })
   }
 

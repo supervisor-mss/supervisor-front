@@ -71,27 +71,29 @@
     </div>
 </div>
 <div class="columns is-multiline">
-    <div class="column is-one-quarter">
-    <div class="element">
-        <label class="label" for="partida">Partida:</label>
-        <input class="input is-small is-primary" type="text" placeholder="Partida">
+    <div class="column is-one-third">
+      <div class="field">
+        <label class="label">Area Conocida:</label>
+        <div class="control">
+            <div class="select is-small is-primary">
+                <select>
+                    <option *ngFor="let area_conocida of areas_conocidas">
+                      {{area_conocida}}
+                    </option>
+                </select>
+            </div>
+        </div>
     </div>
     </div>
-    <div class="column is-one-quarter">
+    <div class="column is-one-third">
     <div class="element">
-        <label class="label" for="partida">Dispositivo:</label>
+        <label class="label" for="partida">Area Funcional:</label>
         <input class="input is-small is-primary" type="text" placeholder="Dispositivo">
     </div>
     </div>
-    <div class="column is-one-quarter">
+    <div class="column is-one-third">
     <div class="element">
-        <label class="label" for="partida">Dispositivo:</label>
-        <input class="input is-small is-primary" type="text" placeholder="Dispositivo">
-    </div>
-    </div>
-    <div class="column is-one-quarter">
-    <div class="element">
-        <label class="label" for="partida">Dispositivo:</label>
+        <label class="label" for="partida">Ubicacion Funcional</label>
         <input class="input is-small is-primary" type="text" placeholder="Dispositivo">
     </div>
     </div>

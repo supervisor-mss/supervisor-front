@@ -16,6 +16,8 @@ export class IndicadoresService {
   //? Url Base, (TODO modficacion para trabajar en microservicios)
   private readonly urlBase: string = "http://localhost:8080/api/plantillas";
 
+  private readonly urlBaseUb: string = "http://localhost:8080/api/ubicaciones";
+
 
   private actIndicDate!: Date;
 
@@ -62,6 +64,11 @@ getTechDescriptions(deviceTicket: DeviceTicket): Observable<string[]>{
   return this.http.post<string[]>(url, body);
 }
 
+//! Metodo para obtener las areas conocidas
+getAreasConocidas():Observable<string[]>{
+  const url: string =`${this.urlBaseUb}/areas_conocidas`;
+  return this.http.get<string[]>(url);
+}
 
 
 }
