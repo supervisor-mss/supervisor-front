@@ -46,8 +46,10 @@
             <label class="label">Descripcion del Ticket:</label>
             <div class="control">
                 <div class="select is-small is-primary">
-                    <select>
-                        <option>REVISION DE EQUIPO DE COMPUTO</option>
+                    <select (change)="onTicketDescriptionChange($event.target)">
+                        <option *ngFor="let ticket_description of ticket_descriptions" [value]="ticket_description">
+                          {{ticket_description}}
+                        </option>
                     </select>
                 </div>
             </div>
@@ -58,8 +60,10 @@
             <label class="label">Descripcion del Técnico:</label>
             <div class="control">
                 <div class="select is-small is-primary">
-                    <select>
-                        <option>SE REVISA EQUIPO DE COMPUTO</option>
+                    <select (change)="onTechDescriptionChange($event.target)">
+                        <option *ngFor="let tech_description of tech_descriptions">
+                          {{tech_description}}
+                        </option>
                     </select>
                 </div>
             </div>
