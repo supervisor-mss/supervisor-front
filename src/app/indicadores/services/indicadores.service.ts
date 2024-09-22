@@ -4,6 +4,8 @@ import { Observable } from 'rxjs';
 import { Party } from '../interfaces/Party.interface';
 import { DeviceTyActivity } from '../interfaces/DeviceTyActivity.interface';
 import { DeviceTicket } from '../interfaces/DeviceTicket.interface';
+import { AreaFuncional } from '../interfaces/AreaFuncional.interface';
+import { UnidadFuncional } from '../interfaces/UnidadFuncional.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -64,10 +66,16 @@ getTechDescriptions(deviceTicket: DeviceTicket): Observable<string[]>{
   return this.http.post<string[]>(url, body);
 }
 
-//! Metodo para obtener las areas conocidas
-getAreasConocidas():Observable<string[]>{
-  const url: string =`${this.urlBaseUb}/areas_conocidas`;
-  return this.http.get<string[]>(url);
+//! Metodo para obtener Areas Funcionales
+getAreasFuncionales():Observable<AreaFuncional[]>{
+  const url: string = `${this.urlBaseUb}/areas_conocidas`;
+  return this.http.get<AreaFuncional[]>(url);
+}
+
+//! Metodo para obtener Unidades Funcionales
+getUnidadesFuncionales(id_area: string): Observable<UnidadFuncional[]>{
+  const url: string = `${this.urlBaseUb}/unidades_funcionales?id_area=${id_area}`;
+  return this.http.get<UnidadFuncional[]>(url)
 }
 
 

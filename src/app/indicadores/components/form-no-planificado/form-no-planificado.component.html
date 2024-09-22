@@ -76,9 +76,9 @@
         <label class="label">Area Conocida:</label>
         <div class="control">
             <div class="select is-small is-primary">
-                <select>
-                    <option *ngFor="let area_conocida of areas_conocidas">
-                      {{area_conocida}}
+                <select (change)="onAreaFuncionalChange()" [(ngModel)]="selectedAreaFuncional">
+                    <option *ngFor="let area_funcional of areas_funcionales" [ngValue]="area_funcional" >
+                      {{area_funcional.area_conocida}}
                     </option>
                 </select>
             </div>
@@ -86,16 +86,30 @@
     </div>
     </div>
     <div class="column is-one-third">
-    <div class="element">
-        <label class="label" for="partida">Area Funcional:</label>
-        <input class="input is-small is-primary" type="text" placeholder="Dispositivo">
-    </div>
+      <div class="field">
+        <label class="label">Area Funcional:</label>
+        <input
+          class="input is-small is-primary"
+          type="text"
+          placeholder="Primary input"
+          disabled
+          value="{{selectedAreaFuncional.id_area}} - {{selectedAreaFuncional.nombre_area}}"
+        />
+      </div>
     </div>
     <div class="column is-one-third">
-    <div class="element">
-        <label class="label" for="partida">Ubicacion Funcional</label>
-        <input class="input is-small is-primary" type="text" placeholder="Dispositivo">
-    </div>
+      <div class="field">
+        <label class="label">Unidad Funcional:</label>
+        <div class="control">
+            <div class="select is-small is-primary">
+                <select (change)="onAreaFuncionalChange()" [(ngModel)]="selectedUnidadFuncional">
+                    <option *ngFor="let unidad_funcional of unidades_funcionales" [ngValue]="unidad_funcional" >
+                      {{unidad_funcional.id_unidad}} - {{unidad_funcional.nombre_unidad}}
+                    </option>
+                </select>
+            </div>
+        </div>
+      </div>
     </div>
 </div>
 <div class="columns is-multiline">

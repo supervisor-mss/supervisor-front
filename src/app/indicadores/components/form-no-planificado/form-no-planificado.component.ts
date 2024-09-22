@@ -3,6 +3,8 @@ import { Party } from '../../interfaces/Party.interface';
 import { IndicadoresService } from '../../services/indicadores.service';
 import { DeviceTyActivity } from '../../interfaces/DeviceTyActivity.interface';
 import { DeviceTicket } from '../../interfaces/DeviceTicket.interface';
+import { AreaFuncional } from '../../interfaces/AreaFuncional.interface';
+import { UnidadFuncional } from '../../interfaces/UnidadFuncional.interface';
 
 @Component({
   selector: 'indicadores-form-no-planificado',
@@ -18,7 +20,8 @@ export class FormNoPlanificadoComponent implements OnInit{
   activity_types: string[] = [];
   ticket_descriptions: string[] = [];
   tech_descriptions: string[] = [];
-  areas_conocidas: string[] = [];
+  areas_funcionales: AreaFuncional[] = [];
+  unidades_funcionales: UnidadFuncional[] = [];
 
 
   selectedParty: string = "";
@@ -26,6 +29,8 @@ export class FormNoPlanificadoComponent implements OnInit{
   selectedActivityType: string = "";
   selectedTicketDescription: string = "";
   selectedTechDescription: string ="";
+  selectedAreaFuncional: AreaFuncional = {area_conocida:"", id_area:"", nombre_area:""};
+  selectedUnidadFuncional: UnidadFuncional = {id_unidad:"", nombre_unidad:""};
 
   constructor(
     private indicadoresService: IndicadoresService
@@ -33,7 +38,7 @@ export class FormNoPlanificadoComponent implements OnInit{
 
   ngOnInit(): void {
     this.getAllParties();
-    this.getAreasConocidas()
+    this.getAreasFuncionales();
   }
 
   getAllParties(){
@@ -83,9 +88,18 @@ export class FormNoPlanificadoComponent implements OnInit{
     })
   }
 
-  getAreasConocidas(){
-    this.indicadoresService.getAreasConocidas().subscribe(data => {
-      this.areas_conocidas = data;
+  getAreasFuncionales(){
+    this.indicadoresService.getAreasFuncionales().subscribe(data => {
+      this.areas_funcionales = data;
+      this.selectedAreaFuncional = this.areas_funcionales[0];
+      this.getUnidadesFuncionales(this.selectedAreaFuncional.id_area);
+    })
+  }
+
+  getUnidadesFuncionales(id_area:string){
+    this.indicadoresService.getUnidadesFuncionales(id_area).subscribe(data =>{
+      this.unidades_funcionales = data;
+      this.selectedUnidadFuncional = this.unidades_funcionales[0];
     })
   }
 
@@ -111,6 +125,10 @@ export class FormNoPlanificadoComponent implements OnInit{
 
   onTechDescriptionChange(target: any){
     this.selectedTechDescription = target.value;
+  }
+
+  onAreaFuncionalChange(){
+    this.getUnidadesFuncionales(this.selectedAreaFuncional.id_area);
   }
 
   testInfo(){
